@@ -1,0 +1,19 @@
+#include<stdio.h>
+int percent(int num, int value)
+{
+    return num/100 * value;
+}
+int main()
+{
+    int price,discount;
+    scanf("%d%d",&price,&discount);
+    int sum= price;
+    int value = price;
+    while(value >0)
+    {
+        value = value - percent(discount,price);
+        sum = sum + value;
+        //value = value - percent(discount,price);
+    }
+    printf("%d",sum);
+}
